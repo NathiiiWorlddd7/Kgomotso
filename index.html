@@ -255,10 +255,11 @@
 </head>
 <body>
 
-<audio autoplay loop>
-  <source src="song.m4a" type="audio/mpeg">
-  Your browser does not support the audio element.
-</audio>
+  <audio autoplay loop>
+    <source src="song.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+  
 
 <div class="login-container" id="login-container">
   <h2>Happy Birthday</h2>
@@ -333,6 +334,8 @@
     if (username === "Kgomotso" && password === "Ngwana") {
       document.getElementById("login-container").style.display = "none";
       document.getElementById("main-content").style.display = "block";
+
+   
       
     } else {
       alert("Incorrect name or password. Please try again");
