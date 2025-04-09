@@ -327,16 +327,19 @@
 
 <script>
   function validateLogin() {
-    const name = document.getElementById('name').value.trim().toLowerCase();
-    const password = document.getElementById('password').value.trim().toLowerCase();
-    if (name === "Kgomotso" && password === "Ngwana") {
-      document.getElementById('login-container').style.display = 'none';
-      document.getElementById('main-content').style.display = 'block';
+    const username = document.getElementById("name").value.trim();
+    const password = document.getElementById("password").value.trim();
+
+    if (username === "Kgomotso" && password === "Ngwana") {
+      document.getElementById("login-container").style.display = "none";
+      document.getElementById("main-content").style.display = "block";
+      
     } else {
-      alert("Oops! Wrong name or password.");
+      alert("Incorrect name or password. Please try again");
     }
   }
 </script>
+
 
 </body>
 </html>
