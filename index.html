@@ -259,6 +259,21 @@
     <source src="song.mp3" type="audio/mpeg">
     Your browser does not support the audio element.
   </audio>
+
+  <script>
+    window.onload = function () {
+      const name = localStorage.getItem("queenName") || "";
+      document.getElementById("greeting").innerText = `, ${name.charAt(0).toUpperCase() + name.slice(1)} `;
+    }
+
+    function playMusic() {
+      const music = document.getElementById("bgMusic");
+      music.play().catch(error => {
+        alert("Music couldn't play automatically. Please check your browser settings.");
+      });
+    }
+  </script>
+
   
 
 <div class="login-container" id="login-container">
@@ -271,6 +286,16 @@
 
 
 <div class="main-content" id="main-content">
+
+  <div class="message-box">
+    <h1 id="greeting"></h1>
+    <button onclick="playMusic()">Click to Play🎶</button>
+  </div>
+
+  <audio id="bgMusic" loop>
+    <source src="song.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
 
   <div class="collage">
   
@@ -285,7 +310,7 @@
   <p>
     I hope your day will be as beautiful as the smile on your face as you read this.
      just know I will always be proud of you.<br>
-    I hope you wil achieve amazing things in life and in your academics.<br>
+    I hope you you wil achieve amazing things in life and in your academics.<br>
      I will always be rooting for you from a distance.<br>
     <br><br>
   </p>
